@@ -86,6 +86,9 @@ export async function updatePerk(req, res, next) {
       { new: true, runValidators: true }
     );
 
+
+    
+
     if (!updated) return res.status(404).json({ message: 'Perk not found' });
     res.json({ perk: updated });
   } catch (err) {
